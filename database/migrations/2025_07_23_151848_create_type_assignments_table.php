@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('type_assignments_type'); // 'Product' or 'ProductCategory'
             $table->unsignedBigInteger('type_assignments_id');
-            $table->foreign('type_id')->references('id')->on('product_types')->cascadeOnDelete();
+            $table->foreignId('type_id')->references('id')->on('product_types')->cascadeOnDelete();
             $table->string('my_bonus_field')->nullable();
         });
     }
