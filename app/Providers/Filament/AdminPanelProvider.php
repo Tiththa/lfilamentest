@@ -27,6 +27,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->theme(asset('css/filament/admin/theme.css'))
             ->colors([
                 'primary' => Color::Amber,
             ])
