@@ -63,3 +63,7 @@ By Default, A admin role is seeded to the database and many users with roles are
 ## Special Note
 
 Provided API credentials did not succeed in the https://extranet.asmorphic.com/portal/ for finding the address or service qualification, hence direct NBN api calls have been integrated as a backup in the system (currently working via the NBN Direct api). 
+
+## Demo
+
+https://lfilamentest-main-dbqqui.laravel.cloud/admin
