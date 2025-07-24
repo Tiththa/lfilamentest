@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'sq_check' => [
+        'base_url' => env('SQ_CHECK_BASE_URL', ''),
+        'username' => env('SQ_CHECK_USERNAME', ''),
+        'password' => env('SQ_CHECK_PASSWORD', ''),
+    ],
+
 ];
