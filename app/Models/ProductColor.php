@@ -10,6 +10,8 @@ class ProductColor extends Model
     /** @use HasFactory<\Database\Factories\ProductColorFactory> */
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = [
         'name',
         'hex_code',

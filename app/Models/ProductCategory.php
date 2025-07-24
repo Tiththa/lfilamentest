@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductCategory extends Model
 {
+    public $timestamps = false;
     protected $fillable = [
         'name',
         'description',
@@ -17,9 +18,18 @@ class ProductCategory extends Model
         return $this->hasMany(Product::class);
     }
 
-    public function types(): \Illuminate\Database\Eloquent\Relations\MorphMany
+    public function types()
     {
-        return $this->morphMany(ProductType::class, 'type_assignments');
+        // add custom pivot table and additional field to assignments
+        return $this->morphToMany(
+            ProductType::class,
+            'type_assignments',
+            'type_assignments', // custom pivot table
+            'type_assignments_id',      // morph ID column
+            'type_id'                   // product_types.id
+        )->withPivot('my_bonus_field');
     }
+
+
 
 }
