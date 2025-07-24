@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Widgets\ProductsCreatedChart;
 use App\Filament\Widgets\ProjectStats;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
@@ -41,7 +42,8 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
-                ProjectStats::class
+                ProjectStats::class,
+                ProductsCreatedChart::class
             ])
             ->middleware([
                 EncryptCookies::class,
